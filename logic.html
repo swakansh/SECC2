@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <title>Automatic Logic Question generator</title>
+    <script src="js/cytoscape.min.js"></script>
+    <script src="js/dagre.js"></script>
+    <script src="js/cytoscape-dagre.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        h1{
+            text-align: center;
+        }
+        div.centered{
+            margin:auto;
+            width:400px;
+        }
+        div.info-box{
+            margin:auto;
+            width:100%;
+            text-align:center;
+        }
+        input#inputExpression{
+            width:400px;
+            padding:5px;
+        }
+        button#trigger{
+            display:block;
+            margin:auto;
+            margin-top:1.1em;
+        }
+        #svgContainer{
+            border:2px solid darkcyan;
+            margin:auto;
+            width:50rem;
+            display:block;
+            max-width:100%;
+        }
+        .gate{
+            width:0;
+            height:0;
+        }
+        #cy {
+            width: 90%;
+            height: 500px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            margin:auto;
+            margin-top:10px;
+            border:2px dashed darkcyan;
+        }
+        
+        button{
+            display:block !important;
+            margin: auto !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Automatic generation of question on logic circuits
+    </h1>
+    <div class="centered">
+        <label>Enter the input expression here:</label>
+        <input type="text" id="inputExpression">
+        <div class="container">
+            <button type="button" class="btn btn-info mt-2" id="parseBtn">Generate</button>
+        </div>
+        <div class="info-box" id="input-box">
+            
+        </div>
+    </div>
+
+    <div class="container" id="oc">
+        <div id="cy">
+
+        </div>
+    </div>
+    <button type="button" class="btn btn-info mt-2" id="saveImgBtn">Save Image</button>
+    <div class="centered">
+        <div class="info-box" id="info-box">
+        </div>
+    </div>
+    <script src="js/main.js?4"></script>
+</body>
+</html>
